@@ -1,32 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Página de inicio modo test
+// Página de inicio
 const Home = () => {
-  return <h2>Bienvenido a la página de inicio de Manuel para el test</h2>;
+  return <h2>Esta es la página de inicio. Pon "/about/" para ir al la página de Manuel</h2>;
 };
 
-// Página de modo test
+// Página de Manuel
 const About = () => {
-  return <h2>Esta es la página de Manuel para el test"</h2>;
+  return <h2>Esta es la página de Manuel. Pon solo "/" para ir a la página de inicio</h2>;
 };
 
 const App = () => {
   return (
     <Router>
       <div>
-        <nav>
-          {/* Navegación */}
-          <ul>
-            <li>
-              <Link to="/">Inicio</Link>
-            </li>
-            <li>
-              <Link to="/about">Acerca de</Link>
-            </li>
-          </ul>
-        </nav>
-
         {/* Definición de rutas */}
         <Routes>
           <Route path="/" element={<Home />} />
